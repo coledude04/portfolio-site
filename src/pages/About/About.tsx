@@ -5,6 +5,7 @@ import {
   type TimelineItem,
 } from '../../data/constants';
 import styles from './About.module.css';
+import headshot from '../../assets/self_headshot.JPG';
 
 // ── Gantt helpers ─────────────────────────────────────────────
 /** Convert [year, month] to a fractional year value for math. */
@@ -55,7 +56,7 @@ export default function About() {
         </div>
         <div className={styles.bioImage}>
           {/* Replace with <img src="..." alt="Cole" /> */}
-          <div className={styles.avatar} aria-hidden="true">👤</div>
+          <img src={headshot} alt='Cole' className={styles.avatar} />
         </div>
       </section>
 

@@ -57,13 +57,11 @@
   width: 280px;
   height: 280px;
   border-radius: var(--radius-2xl);
-  background: linear-gradient(135deg, var(--color-surface-3), var(--color-surface-2));
   border: 2px solid var(--color-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--text-6xl);
   box-shadow: var(--shadow-lg), var(--shadow-glow);
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 /* ── Values / fun facts ───────────────────────────── */
@@ -295,8 +293,8 @@
     order: -1;
   }
   .avatar {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
   }
   .ganttTrackWork {
     margin-top: 80px;
