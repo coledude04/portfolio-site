@@ -1,0 +1,221 @@
+.page {
+  padding-top: calc(var(--navbar-height) + var(--space-16));
+  padding-bottom: var(--space-24);
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.header {
+  margin-bottom: var(--space-16);
+}
+
+.label {
+  composes: section-label from global;
+}
+
+.title {
+  composes: section-title from global;
+}
+
+.subtitle {
+  composes: section-subtitle from global;
+}
+
+/* ── Layout ───────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+/* ── Info panel ───────────────────────────────────── */
+.infoPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.infoCard {
+  composes: card from global;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.infoCardTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.contactItem {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.contactIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(99, 102, 241, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-light);
+  flex-shrink: 0;
+}
+
+.contactIcon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.contactLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  margin-bottom: 2px;
+  font-family: var(--font-mono);
+}
+
+.contactValue {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  font-weight: var(--font-medium);
+}
+
+.contactValue a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.contactValue a:hover {
+  color: var(--color-primary-light);
+}
+
+/* ── Social links ─────────────────────────────────── */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--color-primary-light);
+  border-color: rgba(99, 102, 241, 0.3);
+  background: var(--color-surface-3);
+}
+
+.socialLink svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ── Form ─────────────────────────────────────────── */
+.form {
+  composes: card from global;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-faint);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.submitBtn {
+  composes: btn btn-primary from global;
+  align-self: flex-start;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.successBanner {
+  padding: var(--space-4);
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: var(--radius-md);
+  color: var(--color-success);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
