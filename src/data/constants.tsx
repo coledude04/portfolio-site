@@ -18,7 +18,7 @@ export const PERSON = {
   /** Short handle shown in the navbar logo */
   handle: "cole's portfolio",
   /** Your email address */
-  email: 'cole.alcala04@gmail.com',
+  email: 'contact@colecreates.dev',
   /** City / region shown on the Contact page */
   location: 'Pickerington, OH',
   /** One-liner under your name on the hero */
