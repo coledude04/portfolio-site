@@ -26,16 +26,23 @@ export default function Contact() {
     e.preventDefault();
     setSubmitting(true);
 
-    /**
-     * Replace this with your actual form submission logic.
-     * Options: Formspree, Web3Forms, Cloudflare Email Workers, etc.
-     * e.g. await fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: JSON.stringify(form) })
-     */
-    await new Promise((r) => setTimeout(r, 1000)); // Simulated delay
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: import.meta.env.VITE_WEB3FORMS_KEY, // ← paste your key here
+        ...form,
+      }),
+    });
 
+    const data = await res.json();
     setSubmitting(false);
-    setSubmitted(true);
-    setForm(INITIAL_STATE);
+    if (data.success) {
+      setSubmitted(true);
+      setForm(INITIAL_STATE);
+    } else {
+      alert('Something went wrong. Please try emailing me directly.');
+    }
   };
 
   return (
@@ -126,7 +133,7 @@ export default function Contact() {
         >
           {submitted && (
             <div className={styles.successBanner} role="alert">
-              ✅ Message sent! I&apos;ll get back to you soon.
+              Message sent! I&apos;ll get back to you soon.
             </div>
           )}
 
