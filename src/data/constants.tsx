@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
     description:
       'An iOS app that uses LLMs to help users reflect on their day, track goals, and build healthy habits. Coming soon to the app store...',
     tags: ['React-Native', 'TypeScript', 'Python', 'FastAPI', 'GCP', 'OpenAI API', 'RAG', "Mobile Development"],
-    liveUrl: '#',
+    liveUrl: 'https://apps.apple.com/us/app/daily-habit-journal/id6757454140',
   },
   {
     id: '2',
