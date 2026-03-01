@@ -152,24 +152,24 @@ export const SKILL_GROUPS = [
 
 export const VALUES = [
   {
-    icon: '🚀',
-    name: 'Performance first',
-    desc: 'I care deeply about fast load times, smooth interactions, and low-bandwidth experiences.',
+    icon: '🤖',
+    name: 'AI-first thinking',
+    desc: 'I embed intelligence into everything I build — LLM pipelines, RAG systems, and AI-powered apps. If ML can make it smarter, I find a way to apply it.',
   },
   {
-    icon: '♿',
-    name: 'Accessibility',
-    desc: 'Building for everyone is not optional. Semantic HTML, ARIA, and keyboard navigation are non-negotiables.',
+    icon: '🔧',
+    name: 'End-to-end ownership',
+    desc: 'I take ideas from whiteboard to production. Whether it\'s a backend API, a polished UI, or a cloud deployment, I care about the full picture.',
   },
   {
-    icon: '🧪',
-    name: 'Test-driven',
-    desc: 'Good tests give you confidence to ship. I write unit, integration, and e2e tests as first-class citizens.',
+    icon: '⚡',
+    name: 'Scalability & reliability',
+    desc: 'Good systems don\'t fall over under load. I build with distributed systems in mind — Kafka, Kubernetes, Spark — because scale is always a question of when, not if.',
   },
   {
-    icon: '🌐',
-    name: 'Open source',
-    desc: 'I believe in giving back. I maintain several open-source projects and contribute to others.',
+    icon: '📚',
+    name: 'Always learning',
+    desc: 'CS + Math gave me rigor; internships gave me context. I\'m constantly picking up new tools and ideas — in code, on the mat, and everywhere in between.',
   },
 ];
 
